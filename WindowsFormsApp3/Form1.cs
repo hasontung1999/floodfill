@@ -1164,7 +1164,7 @@ namespace WindowsFormsApp3
                 if(checkPointInShape(new Point(x,y),s.PixelsInLine)==1)
                 {
                     temp_s = s;
-                    s.Properties.ColorFill = CurrentCustom.ColorFill;
+                    temp_s.Properties.ColorFill = CurrentCustom.ColorFill;
                     break;
                 }
                 index++;
@@ -1188,6 +1188,11 @@ namespace WindowsFormsApp3
                         pixels.Add(new Point(a.X, a.Y + 1));
                         pixels.Add(new Point(a.X - 1, a.Y));
                         pixels.Add(new Point(a.X, a.Y - 1));
+
+                        //pixels.Add(new Point(a.X + 1, a.Y + 1));
+                        //pixels.Add(new Point(a.X - 1, a.Y + 1));
+                        //pixels.Add(new Point(a.X - 1, a.Y - 1));
+                        //pixels.Add(new Point(a.X + 1, a.Y - 1));
                     }
                 }
             }
